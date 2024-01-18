@@ -1,7 +1,7 @@
 return {
-    "aktersnurra/no-clown-fiesta.nvim",
+    "vv9k/vim-github-dark",
     priority=1000, -- load before all other start plugins
     config = function()
-      vim.cmd([[colorscheme no-clown-fiesta]])
+      vim.cmd([[colorscheme ghdark]])
     end
 }

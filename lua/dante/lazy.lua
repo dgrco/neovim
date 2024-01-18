@@ -15,9 +15,6 @@ require("lazy").setup({
   {import = "dante.plugins"},
   {import = "dante.plugins.lsp"},
 }, {
-  install = {
-    colorscheme = { "no-clown-fiesta" },
-  },
   checker = {
     enabled = true,
     notify = false,
