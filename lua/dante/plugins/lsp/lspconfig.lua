@@ -76,6 +76,28 @@ return {
       on_attach = on_attach,
     })
 
+    -- configure web stuff 
+    lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    lspconfig["svelte"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- haskell
+    lspconfig["hls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- rust
+    lspconfig["rust_analyzer"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure lua server (with special settings)
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
