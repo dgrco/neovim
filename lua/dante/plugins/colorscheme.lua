@@ -1,7 +1,7 @@
 return {
-    "vv9k/vim-github-dark",
+    "Shatur/neovim-ayu",
     priority=1000, -- load before all other start plugins
     config = function()
-      vim.cmd([[colorscheme ghdark]])
+      vim.cmd([[colorscheme ayu]])
     end
 }

@@ -1,5 +1,4 @@
 local opt = vim.opt -- for conciseness
-opt.guicursor = "" -- change cursor to block in insert
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
