@@ -40,3 +40,24 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- c file autocmd
+vim.cmd("silent! make run")
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { ".c", ".cpp", "*.h" },
+    callback = function()
+        vim.bo.tabstop = 2
+        vim.bo.softtabstop = 2
+        vim.bo.shiftwidth = 2
+        vim.bo.expandtab = true
+        vim.keymap.set("n", "<F5>", function()
+            vim.cmd.write()
+            vim.cmd("make run")
+        end)
+        vim.keymap.set("n", "<F6>", function()
+            vim.cmd.write()
+            vim.cmd("silent! make run")
+        end)
+    end,
+    desc = "Sets for c files"
+})
